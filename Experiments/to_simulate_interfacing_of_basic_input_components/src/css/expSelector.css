@@ -1,3 +1,5 @@
+
+
 h1{
     background-color: beige;
     margin: none;
@@ -14,7 +16,7 @@ h1{
     height: 100vh;
     width: 100vw;
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
   }
   .p-head {
     font-family: Arial, Helvetica, sans-serif;
@@ -46,17 +48,17 @@ h1{
   }
   
   .navbar1{
-    width: 6%;
+    width: 8vw;
     height: 35px;
     color: #ffffff;
     background-color: rgba(4, 59, 79, 0.5);
-    font-size: 1.4rem;
+    font-size: 1.5vw;
     border-radius: 0 0 20px 0;
     font-family: "Raleway",sans-serif;
     }
   
     .navbar1 a{
-    margin-left: 10px;
+    padding-left: 10px;
     color: #fff;
     text-decoration: none;
     }
@@ -78,17 +80,17 @@ h1{
     }
   
   .navbar2{
-    width: 7%;
+    width: 8vw;
     height: 35px;
     color: #ffffff;
     background-color: rgba(4, 59, 79, 0.5);
-    font-size: 1.4rem;
+    font-size: 1.5vw;
     border-radius: 0 0 0 20px;
     font-family: "Raleway",sans-serif;
   }
     
   .navbar2 a{
-    margin-left: 10px;
+    padding-left: 10px;
     color: #fff;
     text-decoration: none;
   }
@@ -170,7 +172,7 @@ h1{
     margin-left: 10px;
     width: 100%;
     max-width: 750px;
-    overflow: hidden;
+    overflow: scroll;
     /* border: 3px solid rgba(4, 59, 79, 0.3); */
     border-radius: 10px;
     position: relative;

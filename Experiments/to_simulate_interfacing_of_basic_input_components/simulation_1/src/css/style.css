@@ -61,11 +61,11 @@ body{
 }
 
 .navbar1{
-  width: 6%;
+  width: 8vw;
   height: 35px;
   color: #ffffff;
   background-color: rgba(4, 59, 79, 0.5);
-  font-size: 1.4rem;
+  font-size: 1.5vw;
   border-radius: 0 0 20px 0;
   font-family: "Raleway",sans-serif;
   }
@@ -93,11 +93,11 @@ body{
   }
 
 .navbar2{
-  width: 7%;
+  width: 8vw;
   height: 35px;
   color: #ffffff;
   background-color: rgba(4, 59, 79, 0.5);
-  font-size: 1.4rem;
+  font-size: 1.5vw;
   border-radius: 0 0 0 20px;
   font-family: "Raleway",sans-serif;
 }
@@ -114,13 +114,12 @@ body{
 
 .container {
   height: 82vh;
-  width: 100vw;
+  width: 100%;
   margin-top: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: #F4F5F7;
-  overflow: hidden;
 }
 .nofled {
   height: 80vh;
@@ -185,12 +184,12 @@ body{
 
 .if-vid {
   width: 48vw;
-  height: 85vh;
+  height: 82vh;
   padding: 3px;
   /* background-color: rgba(4, 59, 79, 0.1); */
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .interfacing {

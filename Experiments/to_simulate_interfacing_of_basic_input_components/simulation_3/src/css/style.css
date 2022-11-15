@@ -183,12 +183,12 @@ body{
 
 .if-vid {
   width: 48vw;
-  height: 85vh;
+  height: 82vh;
   padding: 3px;
   /* background-color: rgba(4, 59, 79, 0.1); */
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .interfacing {
