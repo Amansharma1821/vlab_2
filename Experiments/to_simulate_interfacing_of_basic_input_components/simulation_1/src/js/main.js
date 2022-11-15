@@ -1,42 +1,39 @@
-function changepage() {
-  var x = document.getElementById("pagechanger").value;
-  if (x == 1) document.getElementById("sm1").click();
-  else if (x == 2) document.getElementById("sm2").click();
-  else if (x == 3) document.getElementById("sm3").click();
-  else if (x == 4) document.getElementById("sm4").click();
-  else document.getElementById("sm5").click();
+let image_tracker = "dis";
+
+function changePower() {
+  let image = document.getElementById("ifimg");
+  if (image_tracker == "dis") {
+    image.src = "./src/images/led/led_off.png";
+    document.getElementById("pushbuttonPower").innerHTML = "Stop Simulation";
+    document.getElementById("pushbuttonPower").style.backgroundColor = "red";
+    image_tracker = "off";
+  } else {
+    image.src = "./src/images/led/led_dis.png";
+    document.getElementById("pushbuttonPower").innerHTML = "Start Simulation";
+    document.getElementById("pushbuttonPower").style.backgroundColor =
+      "#009C4E";
+    image_tracker = "dis";
+  }
 }
 
-let image_tracker = "off";
 function changeImage() {
   let image = document.getElementById("ifimg");
   if (image_tracker == "off") {
-    image.src = "./src/images/LedOn.jpeg";
-    image_tracker = "on";
-  } else {
-    image.src = "./src/images/LedOff.jpeg";
+    image.src = "./src/images/led/led_on.png";
+    image_tracker = "red";
+  } else if (image_tracker == "red" || image_tracker == "green") {
+    image.src = "./src/images/led/led_off.png";
     image_tracker = "off";
   }
 }
 
-let image_tracker2 = "off";
-function changeBuzzerImage() {
-  let image = document.getElementById("ifimg2");
-  if (image_tracker2 == "off") {
-    image.src = "./src/images/BuzzerOn.gif";
-    image_tracker2 = "on";
-  } else {
-    image.src = "./src/images/BuzzerOff.jpg";
-    image_tracker2 = "off";
-  }
-}
-
-let audioElement = document.getElementById("myAudio");
-function togglePlay() {
-  if (audioElement.paused) {
-    audioElement.play();
-    audioElement.loop = true;
-  } else {
-    audioElement.pause();
+function changeLedColor() {
+  let image = document.getElementById("ifimg");
+  if (image_tracker == "red") {
+    image.src = "./src/images/led/led_green.png";
+    image_tracker = "green";
+  } else if (image_tracker == "green") {
+    image.src = "./src/images/led/led_on.png";
+    image_tracker = "red";
   }
 }

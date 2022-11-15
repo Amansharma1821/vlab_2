@@ -34,7 +34,11 @@
       <div class="if-vid">
         <p class="p-head">Interfacing of Arduino with Push button :</p>
         <div class="interfacing">
-          <img id="ifimg2" src="./src/images/BuzzerOff.jpg" alt="interfacing" />
+          <img
+            id="ifimg2"
+            src="./src/images/buzzer/buzzer_static.png"
+            alt="interfacing"
+          />
           <audio
             id="myAudio"
             src="./src/audio/buzzer.mp3"
@@ -79,9 +83,13 @@ void loop()
             </textarea>
           </form>
         </div>
-        <div></div>
+        <div class="code-head startStop">
+          <h2 id="pushbuttonPower" onclick="changePowerBuzzer();">
+            Start Simulation
+          </h2>
+        </div>
       </div>
     </div>
-    <script type="text/javascript" src="src/js/main.js"></script>
+    <script type="text/javascript" src="src/js/buzzer.js"></script>
   </body>
 </html>

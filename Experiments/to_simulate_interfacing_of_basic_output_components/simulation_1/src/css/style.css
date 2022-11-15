@@ -113,13 +113,16 @@ body{
 }
 
 .container {
-  height: 80vh;
+  height: 82vh;
   width: 100vw;
   margin-top: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #F4F5F7;
+  overflow: hidden;
 }
+
 .nofled {
   height: 80vh;
   width: 100vw;

@@ -1,32 +1,28 @@
-function changepage() {
-  var x = document.getElementById("pagechanger").value;
-  if (x == 1) document.getElementById("sm1").click();
-  else if (x == 2) document.getElementById("sm2").click();
-  else if (x == 3) document.getElementById("sm3").click();
-  else if (x == 4) document.getElementById("sm4").click();
-  else document.getElementById("sm5").click();
-}
+let image_tracker = "dis";
 
-let image_tracker = "off";
 function changePower() {
   let image = document.getElementById("ifimg");
-  if (image_tracker == "off") {
-    image.src = "./src/images/sliderOnLeft.png";
-    image_tracker = "On";
+  if (image_tracker == "dis") {
+    image.src = "./src/images/sliderOnRight.png";
+    document.getElementById("pushbuttonPower").innerHTML = "Stop Simulation";
+    document.getElementById("pushbuttonPower").style.backgroundColor = "red";
+    image_tracker = "green";
   } else {
     image.src = "./src/images/sliderOff.png";
-    image_tracker = "off";
+    document.getElementById("pushbuttonPower").innerHTML = "Start Simulation";
+    document.getElementById("pushbuttonPower").style.backgroundColor =
+      "#009C4E";
+    image_tracker = "dis";
   }
 }
 
-let image_tracker2 = "off";
-function changeImageLeft() {
+function changeImage() {
   let image = document.getElementById("ifimg");
-  if (image_tracker2 == "off") {
+  if (image_tracker == "green") {
     image.src = "./src/images/sliderOnLeft.png";
-    image_tracker2 = "on";
-  } else {
+    image_tracker = "red";
+  } else if (image_tracker == "red") {
     image.src = "./src/images/sliderOnRight.png";
-    image_tracker2 = "off";
+    image_tracker = "green";
   }
 }
