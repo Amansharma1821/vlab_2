@@ -254,11 +254,12 @@ body{
 }
 
 .startStop h2{
-  background-color: rgba(4, 59, 79, 0.5);
+  background-color: #009C4E;
   color: #fff;
-  padding: 5px 10px;
+  /* text-transform: uppercase; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 5px 30px;
   border-radius: 15px;
-  font-weight: 500;
   cursor: pointer;
 }
 
@@ -282,14 +283,7 @@ body{
   resize: none;
 }
 
-.startStop h2{
-  background-color: rgba(4, 59, 79, 0.5);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-weight: 500;
-  cursor: pointer;
-}
+
 
 
 @media screen and (max-width: 1000px) {
