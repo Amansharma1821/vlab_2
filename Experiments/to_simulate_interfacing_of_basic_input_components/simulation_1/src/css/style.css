@@ -80,17 +80,6 @@ body{
   text-decoration: none;
   }
 
-.navbar-heading{
-  width: 15%;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  color: #ffffff;
-  background-color: rgba(4, 59, 79, 0.5);
-  font-size: 1.4rem;
-  border-radius: 0 0 20px 20px;
-  font-family: "Raleway",sans-serif;
-  }
 
 .navbar2{
   width: 8vw;
@@ -111,6 +100,43 @@ body{
 .navbar2 a:hover{
   text-decoration: none;
 }
+
+
+/* SIMULATION TIMER DISPLAY START */
+
+.timerDisplay {
+  position: relative;
+  width: 15%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: rgba(4, 59, 79, 0.5);
+  font-size: 1.4rem;
+  border-radius: 0 0 20px 20px;
+  font-family: "Roboto mono", monospace;
+  }
+
+.timerbuttons {
+  width: 90%;
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.timerbuttons button {
+  width: 120px;
+  height: 45px;
+  background-color: #205e94;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* TIMER DISPLAY END */
+
 
 .container {
   height: 82vh;

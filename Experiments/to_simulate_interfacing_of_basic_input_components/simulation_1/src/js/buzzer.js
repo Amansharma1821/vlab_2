@@ -37,7 +37,7 @@ function changeBuzzerImage() {
 
 let audioElement = document.getElementById("myAudio");
 function togglePlay() {
-  if (audioElement.paused) {
+  if (image_tracker_buzzer == "on") {
     audioElement.play();
     audioElement.loop = true;
   } else {
