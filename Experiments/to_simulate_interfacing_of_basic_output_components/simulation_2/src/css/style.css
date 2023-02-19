@@ -4,7 +4,7 @@ h1{
 }
   
 header{
-  height: 10vh;
+  height: 8vh;
   border-bottom:4px solid cadetblue ;
 }
   
@@ -31,7 +31,7 @@ body{
   font-size: 20px;
   outline: none;
   position: relative;
-  top: 2.5vh;
+  top: 1vh;
 }
 
 #pagechanger:hover{
@@ -52,17 +52,18 @@ body{
   font-size: 20px;
   outline: none;
   position: relative;
-  top: 2.5vh;
+  top: 1vh;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  height: 4vh;
 }
 
 .navbar1{
   width: 6%;
-  height: 35px;
+  height: 30px;
   color: #ffffff;
   background-color: rgba(4, 59, 79, 0.5);
   font-size: 1.4rem;
@@ -82,7 +83,7 @@ body{
 
 .navbar-heading{
   width: 15%;
-  height: 35px;
+  height: 30px;
   display: flex;
   justify-content: center;
   color: #ffffff;
@@ -94,7 +95,7 @@ body{
 
 .navbar2{
   width: 7%;
-  height: 35px;
+  height: 30px;
   color: #ffffff;
   background-color: rgba(4, 59, 79, 0.5);
   font-size: 1.4rem;
@@ -134,7 +135,7 @@ body{
 .nofledHead {
   width: 100%;
   height: 20vh;
-  margin-top: 3.5rem;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +150,7 @@ body{
 .leds {
   background-color: rgb(46, 64, 92, 0.9);
   color: white;
-  width: 9rem;
+  width: 6.5rem;
   text-decoration: none;
   margin: 0 10px 0 10px;
   border-radius: 10px;
@@ -190,7 +191,7 @@ body{
   /* background-color: rgba(4, 59, 79, 0.1); */
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
-  overflow: scroll;
+   overflow: auto;
 }
 
 .interfacing {
@@ -199,14 +200,14 @@ body{
   max-width: 700px;
   height: 100%;
   max-height: 700px;
-  overflow: scroll;
+   overflow: auto;
   /* border: 3px solid rgba(4, 59, 79, 0.3); */
   border-radius: 10px;
   position: relative;
 }
 .interfacing img {
   transition: all 0.4s ease;
-  width: 700px;
+  width: auto;
   height: auto;
 }
 #pushbutton {

@@ -35,7 +35,85 @@
         <p class="p-head">Interfacing of Arduino with PIR Sensor :</p>
         <div class="interfacing">
           <img id="ifimg" src="./src/images/PIR1.png" alt="interfacing" />
-          <button id="pushbutton" onclick="changeImage();"></button>
+          <button id="pushbuttonRadar" onclick="showRadar()">Show Radar</button>
+          <button id="pushbuttonRadar" onclick="clearRadar()">
+            Clear Radar
+          </button>
+
+          <!-- Inside Buttons -->
+
+          <button
+            class="pbIn1"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn2"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn3"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn4"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn5"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+
+          <!-- Inside Buttons End -->
+
+          <!-- Outside Buttons -->
+
+          <button
+            class="pbOut1"
+            id="pushbutton"
+            onclick="changeImageOutLeft();"
+          ></button>
+          <button
+            class="pbOut11"
+            id="pushbutton"
+            onclick="changeImageOutLeft();"
+          ></button>
+          <button
+            class="pbOut12"
+            id="pushbutton"
+            onclick="changeImageOutLeft();"
+          ></button>
+          <button
+            class="pbOut13"
+            id="pushbutton"
+            onclick="changeImageOutLeft();"
+          ></button>
+          <button
+            class="pbOut2"
+            id="pushbutton"
+            onclick="changeImageOutRight();"
+          ></button>
+          <button
+            class="pbOut21"
+            id="pushbutton"
+            onclick="changeImageOutRight();"
+          ></button>
+          <button
+            class="pbOut22"
+            id="pushbutton"
+            onclick="changeImageOutRight();"
+          ></button>
+          <button
+            class="pbOut23"
+            id="pushbutton"
+            onclick="changeImageOutRight();"
+          ></button>
+
+          <!-- Outside Buttons End -->
         </div>
       </div>
       <div class="separator"></div>
@@ -53,11 +131,18 @@ void loop()
 {
    analogWrite(11,20);
 }
+
+
+#INSTRUCTIONS
+
+Click inside the radar to render an object within the detection range of PIR sensor.
             </textarea>
           </form>
         </div>
         <div class="code-head startStop">
-          <h2 id="pushbuttonPower" onclick="changePower();">Start / Stop</h2>
+          <h2 id="pushbuttonPower" onclick="changePower();">
+            Start Simulation
+          </h2>
         </div>
       </div>
     </div>
