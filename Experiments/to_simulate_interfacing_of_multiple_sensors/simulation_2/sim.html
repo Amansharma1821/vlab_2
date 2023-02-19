@@ -34,8 +34,44 @@
       <div class="if-vid">
         <p class="p-head">Interfacing of Arduino with Ultrasonic Sensor :</p>
         <div class="interfacing">
-          <img id="ifimg" src="./src/images/servo_off.png" alt="interfacing" />
+          <img id="ifimg" src="./src/images/US1.png" alt="interfacing" />
           <button id="pushbutton" onclick="changeImage();"></button>
+          <button id="pushbuttonRadar" onclick="showRadar()">Show Radar</button>
+
+          <!-- Inside Radar Buttons -->
+
+          <button
+            class="pbIn1"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn2"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn3"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn4"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn5"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+          <button
+            class="pbIn6"
+            id="pushbutton"
+            onclick="changeImageIn();"
+          ></button>
+
+          <!-- Inside Buttons End -->
         </div>
       </div>
       <div class="separator"></div>
@@ -44,40 +80,37 @@
         <div>
           <form action="" method="POST">
             <textarea id="arduinoCode" readonly>
-#include <Servo.h>
-  
-int servoPin = 9;
- 
-Servo servo;  
- 
-int angle = 0;   // servo position in degrees
- 
-void setup()
-{
-  servo.attach(servoPin);
+#define echoPin 11
+#define trigPin 12
+long duration, distance;
+void setup(){
+Serial.begin (9600);
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
 }
- 
- 
-void loop()
-{
-  // scan from 0 to 180 degrees
-  for(angle = 0; angle < 180; angle++)  
-  {                                  
-    servo.write(angle);              
-    delay(100);                  
-  }
-  // now scan back from 180 to 0 degrees
-  for(angle = 180; angle > 0; angle--)    
-  {                                
-    servo.write(angle);          
-    delay(100);      
-  }
-} 
+void loop(){
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trigPin, LOW);
+duration = pulseIn(echoPin, HIGH);
+distance= 0.034/2;
+Serial.println(distance);
+delay(50);
+}
+
+
+#INSTRUCTIONS
+
+Click inside the radar to render an object within the detection range of Ultrasonic sensor.
             </textarea>
           </form>
         </div>
         <div class="code-head startStop">
-          <h2 id="pushbuttonPower" onclick="changePower();">Start / Stop</h2>
+          <h2 id="pushbuttonPower" onclick="changePower();">
+            Start Simulation
+          </h2>
         </div>
       </div>
     </div>

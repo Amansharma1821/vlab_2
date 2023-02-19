@@ -32,7 +32,7 @@
 
     <div class="container">
       <div class="if-vid">
-        <p class="p-head">Interfacing of Arduino with Servo Motor :</p>
+        <p class="p-head">Interfacing of Arduino with Soil Moisture Sensor :</p>
         <div class="interfacing">
           <img id="ifimg" src="./src/images/servo_off.png" alt="interfacing" />
           <button id="pushbutton" onclick="changeImage();"></button>
@@ -44,35 +44,39 @@
         <div>
           <form action="" method="POST">
             <textarea id="arduinoCode" readonly>
-#include <Servo.h>
-  
-int servoPin = 9;
- 
-Servo servo;  
- 
-int angle = 0;   // servo position in degrees
- 
-void setup()
-{
-  servo.attach(servoPin);
+int Sensor = 0;
+int data = 0; 
+
+void setup(){
+  pinMode(A0, INPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  Serial.begin(9600);
 }
- 
- 
-void loop()
-{
-  // scan from 0 to 180 degrees
-  for(angle = 0; angle < 180; angle++)  
-  {                                  
-    servo.write(angle);              
-    delay(100);                  
+
+void loop(){
+  Sensor = analogRead(A0);
+  data = map(Sensor,0, 1023, 0, 255);
+  Serial.println(data);
+  
+  if (data < 60){
+     digitalWrite(9,0);
+    digitalWrite(10,0);
+    digitalWrite(11,1);
   }
-  // now scan back from 180 to 0 degrees
-  for(angle = 180; angle > 0; angle--)    
-  {                                
-    servo.write(angle);          
-    delay(100);      
+  
+  if (data > 60 && data < 150){
+    digitalWrite(9,0);
+    digitalWrite(10,1);
+    digitalWrite(11,0);
   }
-} 
+  if (data > 150){
+     digitalWrite(9,1);
+    digitalWrite(10,0);
+    digitalWrite(11,0);
+  }
+}
             </textarea>
           </form>
         </div>
