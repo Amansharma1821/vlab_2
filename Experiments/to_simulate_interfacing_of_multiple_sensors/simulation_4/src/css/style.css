@@ -222,6 +222,17 @@ body{
   margin-top: 97px;
   cursor: pointer;
 }
+
+#imageSlider {
+  z-index: 2;
+  position: absolute;
+  margin-left: -106px;
+  margin-top: 249px;
+  width: 70px;
+  opacity: 0%;
+  cursor: pointer;
+}
+
 /* #pushbutton2 {
   background-color: rgba(255, 0, 0, 0);
   position: absolute;
@@ -284,13 +295,16 @@ body{
 }
 
 .startStop h2{
-  background-color: rgba(4, 59, 79, 0.5);
+  background-color: #009C4E;
   color: #fff;
-  padding: 5px 10px;
+  /* text-transform: uppercase; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 5px 30px;
   border-radius: 15px;
-  font-weight: 500;
   cursor: pointer;
 }
+
+
 
 
 @media screen and (max-width: 1000px) {

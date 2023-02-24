@@ -34,8 +34,19 @@
       <div class="if-vid">
         <p class="p-head">Interfacing of Arduino with Soil Moisture Sensor :</p>
         <div class="interfacing">
-          <img id="ifimg" src="./src/images/servo_off.png" alt="interfacing" />
+          <img id="ifimg" src="./src/images/SM1.png" alt="interfacing" />
           <button id="pushbutton" onclick="changeImage();"></button>
+
+          <!-- SLIDER FOR IMAGES -->
+          <input
+            onchange="setImage(this)"
+            id="imageSlider"
+            type="range"
+            min="0"
+            max="12"
+            value="0"
+            step="1"
+          />
         </div>
       </div>
       <div class="separator"></div>
@@ -81,7 +92,9 @@ void loop(){
           </form>
         </div>
         <div class="code-head startStop">
-          <h2 id="pushbuttonPower" onclick="changePower();">Start / Stop</h2>
+          <h2 id="pushbuttonPower" onclick="changePower();">
+            Start Simulation
+          </h2>
         </div>
       </div>
     </div>
